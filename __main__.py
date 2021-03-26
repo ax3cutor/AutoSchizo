@@ -21,9 +21,9 @@ print("starting...")
 def refresh_token():
 	print("refreshing token...")
 	r = requests.post(REFRESH_URL, headers = {"User-Agent": USER_AGENT}, data = {"client_id": ID,
-																				 "client_secret": SECRET,
-																				 "grant_type": "refresh",
-																				 "refresh_token": REFRESH_TOKEN})
+										     "client_secret": SECRET,
+										     "grant_type": "refresh",
+										     "refresh_token": REFRESH_TOKEN})
 	with open('config.yaml') as config_file:
 		new_config = yaml.load(config_file)
 
