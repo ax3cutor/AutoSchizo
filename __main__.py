@@ -12,8 +12,8 @@ with open('config.yaml') as config_file:
 	REFRESH_TOKEN = config['refresh-token']
 	USER_AGENT = config['user-agent']
 
-FEEDS = ['https://thegatewaypundit.com/feed/', 'https://bigleaguepolitics.com/feed/']
-GUILDS = ['Conservatives', 'Conservative', 'RealNews', 'Politics', 'News']
+FEEDS = ['https://thegatewaypundit.com/feed/', 'https://bigleaguepolitics.com/feed/', 'https://dailywire.com/feeds/rss.xml']
+GUILDS = ['Conservatives', 'Politic', 'Politics', 'News']
 
 print("starting...")
 
