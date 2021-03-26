@@ -6,7 +6,6 @@ REFRESH_URL = f'{BASE_URL}/oauth/grant'
 
 with open('config.yaml') as config_file:
 	config = yaml.safe_load(config_file)
-	print(config)
 	ID = config['id']
 	access_token = config['access-token']
 	SECRET = config['secret']
@@ -55,7 +54,6 @@ while True:
 				link = randent.split()[0]
 				title = randent.replace(link, '')
 		try:
-			print(f"Bearer {access_token}")
 			post = requests.post(SUBMIT_URL, headers = {"Authorization": f"Bearer {access_token}",
 								    "User-Agent": USER_AGENT,
 								    "X-User-Type": "Bot"},
