@@ -57,11 +57,11 @@ while True:
 		try:
 			print(f"Bearer {access_token}")
 			post = requests.post(SUBMIT_URL, headers = {"Authorization": f"Bearer {access_token}",
-														"User-Agent": USER_AGENT,
-														"X-User-Type": "Bot"},
-											 data = {"title": title,
-											 		 "url": link,
-											 		 "board": guild})
+								    "User-Agent": USER_AGENT,
+								    "X-User-Type": "Bot"},
+							 data = {"title": title,
+								 "url": link,
+								 "board": guild})
 			post.raise_for_status()
 			print(f"submitted: +{guild} : {title} ({link})")
 			print("going to sleep for 1 min...")
