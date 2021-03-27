@@ -57,7 +57,6 @@ def main():
 					link = randent.split()[0]
 					title = randent.replace(link, '')
 			try:
-				print(auth_header)
 				post = requests.post(SUBMIT_URL, headers = {"Authorization": auth_header,
 									    "User-Agent": USER_AGENT,
 									    "X-User-Type": "Bot"},
