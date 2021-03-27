@@ -6,7 +6,6 @@ REFRESH_URL = f'{BASE_URL}/oauth/grant'
 
 with open('config.yaml') as config_file:
 	config = yaml.safe_load(config_file)
-	#print(config)
 	ID = config['id']
 	SECRET = config['secret']
 	REFRESH_TOKEN = config['refresh-token']
@@ -15,8 +14,6 @@ with open('config.yaml') as config_file:
 
 FEEDS = ['https://thegatewaypundit.com/feed/', 'https://bigleaguepolitics.com/feed/', 'https://dailywire.com/feeds/rss.xml']
 GUILDS = ['Conservatives', 'Politic', 'Politics', 'News']
-
-print("starting...")
 
 def refresh_token():
 	print("refreshing token...")
@@ -38,7 +35,6 @@ def refresh_token():
 	print("token updated")
 
 def main():
-	print("starting main process...")
 	while True:
 		try:
 			#load credentials
